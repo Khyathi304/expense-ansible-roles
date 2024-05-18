@@ -1,5 +1,5 @@
-- name: Configure the frontend Server
-  hosts: frontend
+- name: "Configure the {{ component }} Server"
+  hosts: "{{ component }}"
   become: yes
   roles:
-  - frontend
+  - "{{ component }}"
