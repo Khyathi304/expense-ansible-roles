@@ -3,6 +3,10 @@
     name: nginx
     state: latest
 
+- name: print info 
+  ansible.builtin.debug:
+    msg: "Hi This is Khyathi"
+    
 - name: start and enable nginx
   ansible.builtin.service:
     name: nginx
