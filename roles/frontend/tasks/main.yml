@@ -1,7 +1,7 @@
 - name: install nginx server
   ansible.builtin.dnf:
-      name: nginx
-      state: latest
+    name: nginx
+    state: latest
   
 - name: start and enable nginx
   ansible.builtin.service:
@@ -11,8 +11,8 @@
 
 - name: run app-pre-req
   ansible.builtin.import_role:
-  name: common
-  tasks_from: app-pre-req
+    name: common
+    tasks_from: app-pre-req
 
 - name: copy backend conf
   ansible.builtin.template:
