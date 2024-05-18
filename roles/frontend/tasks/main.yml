@@ -3,15 +3,12 @@
     name: nginx
     state: latest
 
-- name: print info 
-  ansible.builtin.debug:
-    msg: "Hi This is Khyathi"
-    
 - name: start and enable nginx
   ansible.builtin.service:
     name: nginx
     state: started
     enabled: yes
+    ignore_errors: yes
 
 - name: run app pre-requisites
   ansible.builtin.import_role:
