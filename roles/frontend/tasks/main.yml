@@ -10,9 +10,9 @@
     enabled: yes
 
 - name: delete default website
-    ansible.builtin.file:
-      path: /usr/share/nginx/html
-      state: directory
+  ansible.builtin.file:
+    path: /usr/share/nginx/html
+    state: directory
   
 - name: Download and extract frontend code
   ansible.builtin.unarchive:
