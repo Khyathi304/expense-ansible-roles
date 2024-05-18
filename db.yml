@@ -1,5 +1,5 @@
 - name: Configure the DB Server
-  hosts: localhost
+  hosts: db
   become: yes
   roles:
   - db
