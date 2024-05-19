@@ -17,6 +17,8 @@
     name:  expense
 
 - name: run app-pre-req
+  tags:
+  - deployment
   ansible.builtin.import_role:
     name: common
     tasks_from: app-pre-req
@@ -51,8 +53,10 @@
   ansible.builtin.systemd_service:
     daemon_reload: true
 
-- name: Start and enable backemnd service
+- name: Start and enable backend service
+  tags:
+  - deployment
   ansible.builtin.service:
     name: backend
-    state: started
+    state: restarted
     enabled: yes
