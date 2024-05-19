@@ -6,6 +6,3 @@ backend.daws304.online
 
 [frontend]
 daws304.online
-
-[all:vars]
-ansible_password=DevOps321
