@@ -1,5 +1,5 @@
 - name: create Aws Instances and R53 records
-  hosts: all
+  hosts: localhost
   vars:
     zone: daws304.online
   tasks:
