@@ -58,10 +58,6 @@
   - deployment
   ansible.builtin.service:
     name: backend
-    # state: restarted
+    state: restarted
     enabled: yes
 
-  - name: restart nginx
-  ansible.builtin.service:
-    name: nginx
-    state: restarted
