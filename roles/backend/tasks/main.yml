@@ -49,7 +49,7 @@
     state: import
     name: all
 
-- name: reload
+- name: daemon reload
   ansible.builtin.systemd_service:
     daemon_reload: true
 
@@ -58,5 +58,10 @@
   - deployment
   ansible.builtin.service:
     name: backend
-    state: restarted
+    # state: restarted
     enabled: yes
+
+  - name: restart nginx
+  ansible.builtin.service:
+    name: nginx
+    state: restarted
